@@ -2,11 +2,11 @@
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
  */
-import nextJest from 'next/jest.js'
+import nextJest from "next/jest.js";
 
 const createJestConfig = nextJest({
-  dir: './'
-})
+  dir: "./",
+});
 
 const config = {
   // All imported modules in your tests should be mocked automatically
@@ -201,4 +201,4 @@ const config = {
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
 };
 
-export default createJestConfig(config)
+export default createJestConfig(config);
