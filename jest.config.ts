@@ -198,7 +198,7 @@ const config = {
   // Whether to use watchman for file crawling
   // watchman: true,
 
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
 };
 
 export default createJestConfig(config);
