@@ -33,6 +33,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## Setup Log
+
 ```bash
 npx create-next-app@latest --ts ineedagyro-nextjs
 npm install -D jest jest-environment-jsdom @testing-library/react @testing-library/jest-dom
