@@ -3,9 +3,9 @@ import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 
 describe("Home", () => {
-  it("should render", () => {
+  it("should render loading", () => {
     render(<Home />);
 
-    expect(screen.getByText("Get started by editing")).toBeInTheDocument();
+    expect(screen.getByTestId("loading")).toBeInTheDocument();
   });
 });
