@@ -2,11 +2,11 @@
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
  */
-import nextJest from 'next/jest.js'
+import nextJest from "next/jest.js";
 
 const createJestConfig = nextJest({
-  dir: './'
-})
+  dir: "./",
+});
 
 const config = {
   // All imported modules in your tests should be mocked automatically
@@ -198,7 +198,7 @@ const config = {
   // Whether to use watchman for file crawling
   // watchman: true,
 
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
 };
 
-export default createJestConfig(config)
+export default createJestConfig(config);
