@@ -3,9 +3,9 @@ import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 
 describe("Home", () => {
-  it("should render", () => {
+  it("should render loading", () => {
     render(<Home />);
 
-    expect(screen.getByRole("img")).toBeInTheDocument();
+    expect(screen.getByTestId("loading")).toBeInTheDocument();
   });
 });
