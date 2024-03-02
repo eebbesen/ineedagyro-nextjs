@@ -6,6 +6,6 @@ describe("Home", () => {
   it("should render", () => {
     render(<Home />);
 
-    expect(screen.getByText("Get started by editing")).toBeInTheDocument();
+    expect(screen.getByRole("img")).toBeInTheDocument();
   });
 });
