@@ -1,3 +1,8 @@
+# I Need a Gyro
+Gyros for you
+
+![workflow](https://github.com/eebbesen/ineedagyro-nextjs/actions/workflows/test.yml/badge.svg)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

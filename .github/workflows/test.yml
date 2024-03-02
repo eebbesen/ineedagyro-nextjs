@@ -1,4 +1,4 @@
-name: I Need a Gyro
+name: I Need a Gyro tests
 
 on:
   push:
