@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState, useEffect } from "react";
 import { getData } from "./getData";
@@ -19,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     getLocation(setLat, setLng);
     async function populateLocs() {
-      const cl: BusinessJson[] = await getData(lat,lng);
+      const cl: BusinessJson[] = await getData(lat, lng);
       setLocs(cl);
     }
     populateLocs();

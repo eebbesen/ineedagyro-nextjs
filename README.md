@@ -1,4 +1,5 @@
 # I Need a Gyro
+
 Gyros for you
 
 ![workflow](https://github.com/eebbesen/ineedagyro-nextjs/actions/workflows/test.yml/badge.svg)
@@ -7,7 +8,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+### Run
 
 ```bash
 npm run dev
@@ -16,9 +17,15 @@ npm run build
 npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Test
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run test
+npm run lint
+npm run prettier
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
@@ -38,6 +45,8 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## Setup Log
+
+How this application was initialized
 
 ```bash
 npx create-next-app@latest --ts ineedagyro-nextjs

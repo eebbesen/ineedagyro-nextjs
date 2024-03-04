@@ -1,8 +1,7 @@
-
 import Location from "../../../src/app/location";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import * as testHelper  from "./testHelper";
+import * as testHelper from "./testHelper";
 
 describe("Location", () => {
   it("renders location", () => {
@@ -12,5 +11,5 @@ describe("Location", () => {
     expect(screen.getByText("St Paul Meat Shop")).toBeInTheDocument();
     expect(screen.getByText("1674 Grand Ave")).toBeInTheDocument();
     expect(screen.getByText("246.57 meters")).toBeInTheDocument();
-  })
-})
+  });
+});
