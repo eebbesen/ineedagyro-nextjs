@@ -1,10 +1,4 @@
-export default function Location(props: Readonly<{
-  alias: string;
-  name: string;
-  location: { address1: string };
-  distance: number;
-  url: string;
-}>) {
+export default function Location(props: Readonly<BusinessJson>) {
   const { alias, name, location, distance, url } = props;
 
   return (

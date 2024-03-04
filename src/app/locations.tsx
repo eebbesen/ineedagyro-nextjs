@@ -1,12 +1,10 @@
 import Location from "./location";
 
-export function Locations ({ locs }: { locs: BusinessJson[] }) {
-  const locations = [...locs]
-
+export default function Locations ({ locs }: { readonly locs: ReadonlyArray<BusinessJson> }) {
   return (
     <div id="locations" data-testid="locations">
       <ul>
-        {locations.map(
+        {locs.map(
           (l: BusinessJson) => (
             <li key={l.alias}>
               <Location

@@ -26,11 +26,8 @@ async function callYelp (
     options,
   )
 
-  const businesses =  await response.json();
-  return businesses.businesses;
-    // .then((response) => response.json())
-    // .then((json) => {
-    //   return json;
-    // })
-    // .catch((err) => console.error(err));
+  const data =  await response.json();
+  return data.businesses;
+  // todo: error handling
+  // todo: what if there are no businesses found for location/term?
 }

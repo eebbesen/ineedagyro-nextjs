@@ -5,11 +5,11 @@ import { render, screen } from "@testing-library/react";
 import { mockFetch, mockGeolocation } from "./testHelper";
 
 describe("Home", () => {
-  it("should render loading when no lat/long", () => {
+  it("should render loading when no lat/long", async () => {
     window.fetch = mockFetch([]);
     mockGeolocation(0.0, 0.0);
 
-    act(() => {
+    await act(() => {
       render(<Home />);
     });
 
@@ -27,4 +27,4 @@ describe("Home", () => {
   //   expect(screen.getByTestId("loading")).not.toBeInTheDocument();
   //   expect(screen.getByText("Shish")).toBeInTheDocument();
   // });
-});
+})

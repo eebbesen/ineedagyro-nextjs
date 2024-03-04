@@ -11,7 +11,7 @@ describe("Results", () => {
   });
 
   it("should render locations when locations", () => {
-    render(<Results locations={JSON.parse(testHelper.BUSINESS_JSON).businesses} />);
+    render(<Results locations={JSON.parse(testHelper.BUSINESSES_JSON).businesses} />);
 
     expect(screen.queryByTestId("loading")).not.toBeInTheDocument();
     expect(screen.getByText("Shish")).toBeInTheDocument();
