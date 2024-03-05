@@ -16,7 +16,7 @@ export default function Results({
   }
 
   return (
-    <div id="results" data-testid="results" className="my-4">
+    <div id="results" data-testid="results" className="my-4 mx-16">
       <Businesses businesses={businesses} />
     </div>
   );
