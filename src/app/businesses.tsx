@@ -6,10 +6,9 @@ export default function Businesses({
   readonly businesses: ReadonlyArray<BusinessJson>;
 }) {
   return (
-    <div id="businesses" data-testid="businesses">
-      <ul>
+    <div id="businesses" data-testid="businesses" className="grid gap-4">
         {businesses.map((b: BusinessJson) => (
-          <li key={b.alias}>
+          <div key={b.alias}>
             <Location
               alias={b.alias}
               name={b.name}
@@ -17,9 +16,8 @@ export default function Businesses({
               distance={b.distance}
               url={b.url}
             />
-          </li>
+          </div>
         ))}
-      </ul>
     </div>
   );
 }
