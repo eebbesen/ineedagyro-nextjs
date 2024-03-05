@@ -1,13 +1,13 @@
 import React from "react";
 import Loading from "./loading";
-import Locations from "./locations";
+import Businesses from "./businesses";
 
 export default function Results({
-  locations,
+  businesses,
 }: {
-  readonly locations: BusinessJson[];
+  readonly businesses: BusinessJson[];
 }) {
-  if (locations === undefined || locations.length < 1) {
+  if (businesses === undefined || businesses.length < 1) {
     return (
       <div id="results" data-testid="results">
         <Loading />
@@ -17,7 +17,7 @@ export default function Results({
 
   return (
     <div>
-      <Locations locs={locations} />
+      <Businesses businesses={businesses} />
     </div>
   );
 }

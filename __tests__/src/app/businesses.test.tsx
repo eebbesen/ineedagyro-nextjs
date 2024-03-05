@@ -1,12 +1,12 @@
-import Locations from "../../../src/app/locations";
+import Businesses from "../../../src/app/businesses";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import * as testHelper from "./testHelper";
 
-describe("Locations", () => {
-  it("renders locations", () => {
+describe("Businesses", () => {
+  it("renders businesses", () => {
     render(
-      <Locations locs={JSON.parse(testHelper.BUSINESSES_JSON).businesses} />,
+      <Businesses businesses={JSON.parse(testHelper.BUSINESSES_JSON).businesses} />,
     );
 
     expect(screen.getByText("Shish")).toBeInTheDocument();
