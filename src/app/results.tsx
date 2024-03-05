@@ -1,9 +1,13 @@
-import React from 'react';
-import Loading from './loading';
-import Locations from './locations';
+import React from "react";
+import Loading from "./loading";
+import Businesses from "./businesses";
 
-export default function Results({ locations }: { readonly locations: BusinessJson[] }) {
-  if (locations === undefined || locations.length < 1) {
+export default function Results({
+  businesses,
+}: {
+  readonly businesses: BusinessJson[];
+}) {
+  if (businesses === undefined || businesses.length < 1) {
     return (
       <div id="results" data-testid="results">
         <Loading />
@@ -12,8 +16,8 @@ export default function Results({ locations }: { readonly locations: BusinessJso
   }
 
   return (
-    <div>
-      <Locations locs={locations} />
+    <div id="results" data-testid="results" className="my-4 mx-16">
+      <Businesses businesses={businesses} />
     </div>
   );
-};
+}

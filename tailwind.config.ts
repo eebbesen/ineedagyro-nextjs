@@ -16,6 +16,9 @@ const config: Config = {
       animation: {
         "logo-spin": "spin 4s linear infinite",
       },
+      colors: {
+        "greek-blue": "#001489",
+      },
     },
   },
   plugins: [],
