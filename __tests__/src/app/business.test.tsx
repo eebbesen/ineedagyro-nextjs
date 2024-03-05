@@ -10,6 +10,6 @@ describe("Business", () => {
 
     expect(screen.getByText("St Paul Meat Shop")).toBeInTheDocument();
     expect(screen.getByText("1674 Grand Ave")).toBeInTheDocument();
-    expect(screen.getByText("246.57 meters")).toBeInTheDocument();
+    expect(screen.getByText("0.15 miles")).toBeInTheDocument();
   });
 });

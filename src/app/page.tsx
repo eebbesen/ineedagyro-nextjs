@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getBusinesses } from "./getBusinesses";
+import { getBusinesses } from "./utils/getBusinesses";
 import Results from "./results";
 
 function getLocation(setLat: Function, setLng: Function): void {
