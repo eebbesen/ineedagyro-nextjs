@@ -3,12 +3,12 @@ export default function Business(props: Readonly<BusinessJson>) {
 
   return (
     <div
-      className="business bg-greek-blue hover:bg-white hover:text-greek-blue rounded-lg py-2"
+      className="business bg-greek-blue hover:bg-white hover:text-greek-blue transition ease-in-out delay-175 rounded-lg py-2"
       key={alias}
       id={alias}
     >
-      <a href={url} className="grid text-center">
-        <div className="business-name text-6xl">{name}</div>
+      <a href={url} className="grid">
+        <div className="business-name text-6xl text-center">{name}</div>
         <div className="business-data grid grid-cols-6">
           <div className="business-address col-span-2 col-start-1 text-right">
             {location.address1}

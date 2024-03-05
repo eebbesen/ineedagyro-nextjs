@@ -15,12 +15,16 @@ export default function Home() {
   const [lat, setLat] = useState(0.0);
   const [lng, setLng] = useState(0.0);
   const [businesses, setBusinesses] = useState([] as BusinessJson[]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     getLocation(setLat, setLng);
     async function populateLocs() {
-      const data: BusinessJson[] = await getBusinesses(lat, lng);
-      setBusinesses(data);
+      if (Math.abs(lat) > 0 && Math.abs(lng) > 0) {
+        const data: BusinessJson[] = await getBusinesses(lat, lng);
+        setBusinesses(data);
+        setIsLoaded(true);
+      }
     }
     populateLocs();
   }, [lat, lng]);
@@ -28,7 +32,7 @@ export default function Home() {
   return (
     <main>
       <div>
-        <Results businesses={businesses} />
+        <Results businesses={businesses} isLoaded={isLoaded} />
       </div>
     </main>
   );

@@ -12,10 +12,6 @@ async function callYelp(
   lng: number = -93.1710553,
   term: string = "gyro",
 ): Promise<BusinessJson[]> {
-  if (lat === 0 || lng === 0) {
-    return Promise.resolve([] as BusinessJson[]);
-  }
-
   const options = {
     method: "GET",
     headers: {
@@ -32,5 +28,4 @@ async function callYelp(
   const data = await response.json();
   return data.businesses;
   // todo: error handling
-  // todo: what if there are no businesses found for location/term?
 }
