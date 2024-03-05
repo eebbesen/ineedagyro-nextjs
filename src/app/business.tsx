@@ -3,7 +3,7 @@ export default function Business(props: Readonly<BusinessJson>) {
 
   return (
     <div
-      className="business bg-greek-blue hover:bg-white hover:text-greek-blue rounded-lg py-2"
+      className="business bg-greek-blue hover:bg-white hover:text-greek-blue transition ease-in-out delay-175 rounded-lg py-2"
       key={alias}
       id={alias}
     >
