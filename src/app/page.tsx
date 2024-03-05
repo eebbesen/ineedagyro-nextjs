@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getData } from "./getData";
+import { getBusinesses } from "./getBusinesses";
 import Results from "./results";
 
 function getLocation(setLat: Function, setLng: Function): void {
@@ -19,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     getLocation(setLat, setLng);
     async function populateLocs() {
-      const data: BusinessJson[] = await getData(lat, lng);
+      const data: BusinessJson[] = await getBusinesses(lat, lng);
       console.log(lat, lng);
       setBusinesses(data);
       console.log(data);

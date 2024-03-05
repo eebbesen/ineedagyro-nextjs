@@ -1,6 +1,6 @@
 "use server";
 
-export async function getData(
+export async function getBusinesses(
   lat: number,
   lng: number,
 ): Promise<BusinessJson[]> {
