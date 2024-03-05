@@ -4,10 +4,12 @@ import Businesses from "./businesses";
 
 export default function Results({
   businesses,
+  isLoaded,
 }: {
   readonly businesses: BusinessJson[];
+  readonly isLoaded: boolean;
 }) {
-  if (businesses === undefined || businesses.length < 1) {
+  if (!isLoaded) {
     return (
       <div id="results" data-testid="results">
         <Loading />

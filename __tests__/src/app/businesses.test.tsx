@@ -16,4 +16,10 @@ describe("Businesses", () => {
     expect(screen.getByText("St Paul Meat Shop")).toBeInTheDocument();
     expect(screen.getByText("1674 Grand Ave")).toBeInTheDocument();
   });
+
+  it("renders No Businesses Found", () => {
+    render(<Businesses businesses={[]} />);
+
+    expect(screen.getByText("No Businesses Found")).toBeInTheDocument();
+  });
 });

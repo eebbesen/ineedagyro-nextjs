@@ -5,6 +5,18 @@ export default function Businesses({
 }: {
   readonly businesses: ReadonlyArray<BusinessJson>;
 }) {
+  if (businesses.length === 0) {
+    return (
+      <div
+        id="businesses"
+        data-testid="businesses"
+        className="mt-8  text-6xl text-center"
+      >
+        No Businesses Found
+      </div>
+    );
+  }
+
   return (
     <div id="businesses" data-testid="businesses" className="grid gap-4">
       {businesses.map((b: BusinessJson) => (
