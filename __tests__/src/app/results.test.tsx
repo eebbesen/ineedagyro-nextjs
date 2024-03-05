@@ -12,7 +12,9 @@ describe("Results", () => {
 
   it("should render businesses when locations", () => {
     render(
-      <Results businesses={JSON.parse(testHelper.BUSINESSES_JSON).businesses} />,
+      <Results
+        businesses={JSON.parse(testHelper.BUSINESSES_JSON).businesses}
+      />,
     );
 
     expect(screen.queryByTestId("loading")).not.toBeInTheDocument();

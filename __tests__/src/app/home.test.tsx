@@ -14,5 +14,5 @@ describe("Home", () => {
     });
 
     expect(screen.getByTestId("loading")).toBeInTheDocument();
-  })
-})
+  });
+});

@@ -6,7 +6,9 @@ import * as testHelper from "./testHelper";
 describe("Businesses", () => {
   it("renders businesses", () => {
     render(
-      <Businesses businesses={JSON.parse(testHelper.BUSINESSES_JSON).businesses} />,
+      <Businesses
+        businesses={JSON.parse(testHelper.BUSINESSES_JSON).businesses}
+      />,
     );
 
     expect(screen.getByText("Shish")).toBeInTheDocument();

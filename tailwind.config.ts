@@ -17,8 +17,8 @@ const config: Config = {
         "logo-spin": "spin 4s linear infinite",
       },
       colors: {
-        'greek-blue': '#001489',
-      }
+        "greek-blue": "#001489",
+      },
     },
   },
   plugins: [],
