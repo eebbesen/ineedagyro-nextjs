@@ -16,9 +16,12 @@ export default function Navbar({
     <header className="text-right my-2 me-6">
       <nav>
         <ul>
-          <a href="#" onClick={clickHandler}>
+          <li
+            onClick={clickHandler}
+            className="hover:cursor-pointer hover:text-gray-400 transition ease-in-out duration-1000"
+          >
             {`View in ${newDistanceType}`}
-          </a>
+          </li>
         </ul>
       </nav>
     </header>
