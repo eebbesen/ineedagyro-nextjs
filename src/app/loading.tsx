@@ -10,10 +10,11 @@ export default function Loading() {
     >
       <Image
         src={logo.src}
-        className="animate-logo-spin"
+        className="animate-logo-spin w-full h-auto"
         alt="spinning gyro"
-        width={180}
-        height={37}
+        width="0"
+        height="0"
+        sizes="100vw"
         priority
       />
     </div>
