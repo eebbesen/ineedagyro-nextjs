@@ -1,5 +1,15 @@
-export default function Business(props: Readonly<BusinessJson>) {
-  const { alias, name, location, distance, url } = props;
+import { toMiles, toKms } from "./utils/convert";
+
+export default function Business({
+  locJson,
+  distanceType,
+}: {
+  locJson: Readonly<BusinessJson>;
+  distanceType: Distance;
+}) {
+  const { alias, name, location, distance, url } = locJson;
+  const displayDistance =
+    distanceType === "miles" ? toMiles(distance) : toKms(distance);
 
   return (
     <div
@@ -13,7 +23,7 @@ export default function Business(props: Readonly<BusinessJson>) {
           <div className="business-address col-span-2 col-start-1 text-right">
             {location.address1}
           </div>
-          <div className="business-distance col-span-2 col-start-5 text-left">{`${distance.toFixed(2)} meters`}</div>
+          <div className="business-distance col-span-2 col-start-5 text-left">{`${displayDistance} ${distanceType}`}</div>
         </div>
       </a>
     </div>

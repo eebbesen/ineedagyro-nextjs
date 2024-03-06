@@ -11,3 +11,5 @@ type BusinessJson = {
   url: string;
   [x: string]: string | number | array;
 };
+
+type Distance = "miles" | "kms";

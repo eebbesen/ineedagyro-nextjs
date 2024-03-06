@@ -2,8 +2,10 @@ import Business from "./business";
 
 export default function Businesses({
   businesses,
+  distanceType,
 }: {
   readonly businesses: ReadonlyArray<BusinessJson>;
+  readonly distanceType: Distance;
 }) {
   if (businesses.length === 0) {
     return (
@@ -21,13 +23,7 @@ export default function Businesses({
     <div id="businesses" data-testid="businesses" className="grid gap-4">
       {businesses.map((b: BusinessJson) => (
         <div key={b.alias}>
-          <Business
-            alias={b.alias}
-            name={b.name}
-            location={b.location}
-            distance={b.distance}
-            url={b.url}
-          />
+          <Business locJson={b} distanceType={distanceType} />
         </div>
       ))}
     </div>

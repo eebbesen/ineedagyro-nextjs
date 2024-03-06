@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getBusinesses } from "./getBusinesses";
+import { getBusinesses } from "./utils/getBusinesses";
+import Navbar from "./navbar";
 import Results from "./results";
 
 function getLocation(setLat: Function, setLng: Function): void {
@@ -16,6 +17,7 @@ export default function Home() {
   const [lng, setLng] = useState(0.0);
   const [businesses, setBusinesses] = useState([] as BusinessJson[]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [distanceType, setDistanceType] = useState("miles" as Distance);
 
   useEffect(() => {
     getLocation(setLat, setLng);
@@ -30,10 +32,17 @@ export default function Home() {
   }, [lat, lng]);
 
   return (
-    <main>
-      <div>
-        <Results businesses={businesses} isLoaded={isLoaded} />
-      </div>
-    </main>
+    <div>
+      <Navbar distanceType={distanceType} setDistanceType={setDistanceType} />
+      <main>
+        <div>
+          <Results
+            businesses={businesses}
+            isLoaded={isLoaded}
+            distanceType={distanceType}
+          />
+        </div>
+      </main>
+    </div>
   );
 }

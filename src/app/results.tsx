@@ -5,9 +5,11 @@ import Businesses from "./businesses";
 export default function Results({
   businesses,
   isLoaded,
+  distanceType,
 }: {
   readonly businesses: BusinessJson[];
   readonly isLoaded: boolean;
+  readonly distanceType: Distance;
 }) {
   if (!isLoaded) {
     return (
@@ -18,8 +20,8 @@ export default function Results({
   }
 
   return (
-    <div id="results" data-testid="results" className="my-4 mx-16">
-      <Businesses businesses={businesses} />
+    <div id="results" data-testid="results" className="mb-4 mx-16">
+      <Businesses businesses={businesses} distanceType={distanceType} />
     </div>
   );
 }
