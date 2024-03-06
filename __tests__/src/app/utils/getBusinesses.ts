@@ -19,4 +19,12 @@ describe("getBusinesses", () => {
     expect(data.length).toEqual(3);
     expect(data[0].alias).toEqual("shish-saint-paul");
   });
+
+  it("throws error when fetch is not 200", async () => {
+    window.fetch = mockFetch([], 400);
+
+    await expect(getBusinesses(44.938128, -93.169022)).rejects.toThrow(
+      "Yelp API call failed",
+    );
+  });
 });

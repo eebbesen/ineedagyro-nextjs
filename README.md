@@ -27,9 +27,18 @@ npm run lint
 npm run prettier
 ```
 
+### logging
+
+Winson is used for to-file logging. By default logs are written to the `logs` directory in the application but you may need to modify this. Logged events are:
+
+- errors calling Yelp
+- latitude/longitude used in calls to Yelp
+  - decimals are stripped to obfuscate exact user location
+- miles/kms toggle events
+
 ## Setup Log
 
-How this application was initialized
+How this application was initialized. For more info on packages added later see package.json -- the below only includes npm installs where `init` was required.
 
 ```bash
 npx create-next-app@latest --ts ineedagyro-nextjs

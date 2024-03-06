@@ -1,5 +1,7 @@
 "use server";
 
+import { logger } from "../logger";
+
 export async function getBusinesses(
   lat: number,
   lng: number,
@@ -20,12 +22,21 @@ async function callYelp(
     },
   };
 
+  logger.info(
+    `getBusiness: calling Yelp with lat: ${lat.toFixed()}, lng: ${lng.toFixed()}`,
+  );
   const response = await fetch(
     `https://api.yelp.com/v3/businesses/search?latitude=${lat}&longitude=${lng}&term=${term}&sort_by=distance&limit=20`,
     options,
   );
 
+  if (response.status !== 200) {
+    logger.error(
+      `getBusiness: Yelp API call failed with status: ${response.status}`,
+    );
+    throw new Error("Yelp API call failed");
+  }
+
   const data = await response.json();
   return data.businesses;
-  // todo: error handling
 }
