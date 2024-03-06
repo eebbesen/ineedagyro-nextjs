@@ -18,3 +18,9 @@ type DataJson = {
 };
 
 type Distance = "miles" | "kms";
+
+type APISearchParams = {
+  lat: number;
+  lng: number;
+  term: string;
+};
