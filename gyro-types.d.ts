@@ -13,4 +13,14 @@ type BusinessJson = {
   [x: string]: string | number | array;
 };
 
+type DataJson = {
+  businesses: BusinessJson[];
+};
+
 type Distance = "miles" | "kms";
+
+type APISearchParams = {
+  lat: number;
+  lng: number;
+  term: string;
+};

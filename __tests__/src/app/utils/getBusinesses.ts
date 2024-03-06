@@ -1,10 +1,9 @@
 import { getBusinesses } from "../../../../src/app/utils/getBusinesses";
 import * as testHelper from "../testHelper";
-import { mockFetch, mockGeolocation } from "../testHelper";
 
 describe("getBusinesses", () => {
   it("returns empty array when no results", async () => {
-    window.fetch = mockFetch({ businesses: [] });
+    window.fetch = testHelper.mockFetch({ businesses: [] });
 
     const data = await getBusinesses(44.938128, -93.169022);
 
@@ -12,7 +11,7 @@ describe("getBusinesses", () => {
   });
 
   it("returns results", async () => {
-    window.fetch = mockFetch(JSON.parse(testHelper.BUSINESSES_JSON));
+    window.fetch = testHelper.mockFetch(JSON.parse(testHelper.BUSINESSES_JSON));
 
     const data = await getBusinesses(44.938128, -93.169022);
 
@@ -21,7 +20,7 @@ describe("getBusinesses", () => {
   });
 
   it("throws error when fetch is not 200", async () => {
-    window.fetch = mockFetch([], 400);
+    window.fetch = testHelper.mockFetch([], 400);
 
     await expect(getBusinesses(44.938128, -93.169022)).rejects.toThrow(
       "Yelp API call failed",

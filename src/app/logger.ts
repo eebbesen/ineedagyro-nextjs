@@ -6,7 +6,7 @@ const logger = winston.createLogger({
   format: combine(timestamp(), json()),
   transports: [
     new winston.transports.File({
-      filename: "./logs/ineedagyro-nextjs.log",
+      filename: `./logs/${process.env.NODE_ENV}_ineedagyro-nextjs.log`,
     }),
   ],
 });
