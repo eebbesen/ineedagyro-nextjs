@@ -22,7 +22,9 @@ async function callYelp(
     },
   };
 
-  logger.info(`getBusiness: calling Yelp with lat: ${lat}, lng: ${lng}`);
+  logger.info(
+    `getBusiness: calling Yelp with lat: ${lat.toFixed()}, lng: ${lng.toFixed()}`,
+  );
   const response = await fetch(
     `https://api.yelp.com/v3/businesses/search?latitude=${lat}&longitude=${lng}&term=${term}&sort_by=distance&limit=20`,
     options,
