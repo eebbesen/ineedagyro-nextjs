@@ -13,4 +13,8 @@ type BusinessJson = {
   [x: string]: string | number | array;
 };
 
+type DataJson = {
+  businesses: BusinessJson[];
+};
+
 type Distance = "miles" | "kms";
