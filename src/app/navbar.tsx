@@ -1,5 +1,7 @@
 "use client";
 
+import { logDistanceToggle } from "./utils/clientLoggerHelper";
+
 export default function Navbar({
   distanceType,
   setDistanceType,
@@ -10,6 +12,7 @@ export default function Navbar({
   const newDistanceType = distanceType === "miles" ? "kms" : "miles";
   const clickHandler = () => {
     setDistanceType(newDistanceType);
+    logDistanceToggle(newDistanceType);
   };
 
   return (
