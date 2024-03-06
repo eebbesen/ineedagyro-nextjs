@@ -1,5 +1,6 @@
 type LocationJson = {
   address1: string;
+  city: string;
   [x: string]: string;
 };
 
